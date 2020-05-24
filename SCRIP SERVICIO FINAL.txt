@@ -1,0 +1,25 @@
+CREATE TABLE clientes (
+	n_contrato INT(11) PRIMARY KEY,
+	d_verificador CHAR(10) NOT NULL,
+	se_ruta_folio CHAR(10) NOT NULL,
+	nombre VARCHAR(50) NOT NULL,
+	colonia VARCHAR(80) NOT NULL,
+	direccion VARCHAR(50) NOT NULL,
+	meses_deuda INT(11) NOT NULL,
+	can_deuda INT(11) NOT NULL,
+	status VARCHAR(12) NOT NULL);
+
+
+CREATE TABLE colonias(
+	id_colonia INT(11) PRIMARY KEY AUTO_INCREMENT,
+	nombre VARCHAR(80) NOT NULL,
+	codigo_postal CHAR(5) NOT NULL,
+	municipio VARCHAR(50) NOT NULL);
+
+
+CREATE TABLE usuarios (
+	n_usuario INT(11) PRIMARY KEY AUTO_INCREMENT,
+	nombre VARCHAR(150) NOT NULL,
+	nombre_usuario VARCHAR(50) NOT NULL,
+	tipo_usuario VARCHAR(20) NOT NULL,
+	contraseña VARCHAR(50) NOT NULL);
